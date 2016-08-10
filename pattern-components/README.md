@@ -6,5 +6,5 @@
     - visitor
         - BookVisitor
     - adapter
-        - LibraryToDigitalAdapter
+        - PaperToDigitalCatalogAdapter
     etc ..
