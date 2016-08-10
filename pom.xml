@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>0.0.1</version>
-        <artifactId>large-bookstore-app-parent</artifactId>
-    </parent>
+    <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+    <artifactId>large-bookstore-app-parent</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
 
-    <artifactId>book-data-access</artifactId>
-
-
+    <modules>
+        <module>data-component/bookstore-data</module>
+    </modules>
+    
 </project>
