@@ -1,9 +1,10 @@
 - anything outside of the usual patterns should go in a folder designated for that pattern for example:
-    # Examples:
+
+    #Examples:
     - singleton
         - SingleBookRetrievalSingle project
     - visitor
         - BookVisitor
-    adapter
+    - adapter
         - LibraryToDigitalAdapter
     etc ..
