@@ -1,0 +1,5 @@
+-- this deals with any related to make calls to the database and retrieving data
+-- TECHNOLOGY STACK:
+    -- HQL
+    -- SPRING JPA
+    -- OTHERS

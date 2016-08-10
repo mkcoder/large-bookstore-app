@@ -1,0 +1,12 @@
+- this projects will hold mostly the web app and stuff related to web
+    - this project uses the following technology:
+        - node.js
+        - react.js
+        - redux.js
+        - webpack.js
+        - bootstrap
+            - customized minimal theme
+        - lodash
+        - sagas.js
+
+-- will update this as the project layers grows
