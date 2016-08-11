@@ -6,9 +6,9 @@
 
     <context:component-scan base-package="com.mkcoder.mycodingblog" />
 
-    <context:property-placeholder location="E:\Sandbox\large-bookstore-app\configurations\database.properties" />
+    <context:property-placeholder location="file:/E:\Sandbox\large-bookstore-app\configurations\database.properties" />
 
-    <bean class="com.mkcoder.mycodingblog.data.properties.PropertyLoader">
+    <bean id="jdbc_bean" class="com.mkcoder.mycodingblog.data.properties.PropertyLoader">
         <property name="jdbcUrl" value="${jdbc.url}" />
         <property name="jdbcPassword" value="${jdbc.password}" />
         <property name="jdbcUsername" value="${jdbc.username}" />
