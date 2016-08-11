@@ -56,7 +56,7 @@ CREATE TABLE `customer` (
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `email` varchar(60) NOT NULL,
-  `password` text NOT NULL,
+  `jdbcPassword` text NOT NULL,
   `credit_card_number` text NOT NULL,
   `address` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
