@@ -8,10 +8,5 @@
 
     <context:property-placeholder location="file:/E:\Sandbox\large-bookstore-app\configurations\database.properties" />
 
-    <bean id="jdbc_bean" class="com.mkcoder.mycodingblog.data.properties.PropertyLoader">
-        <property name="jdbcUrl" value="${jdbc.url}" />
-        <property name="jdbcPassword" value="${jdbc.password}" />
-        <property name="jdbcUsername" value="${jdbc.username}" />
-    </bean>
 
 </beans>

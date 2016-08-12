@@ -10,7 +10,14 @@
     <packaging>pom</packaging>
 
     <modules>
+        <!-- data-component -->
         <module>data-component/bookstore-data</module>
+
+        <!-- data-common-component -->
+        <module>data-common-component/data-bookstore-models/data-book-model</module>
+
+        <!-- pattern-components -->
+        <module>pattern-components/builder/builder-service</module>
     </modules>
     
 </project>
