@@ -6,34 +6,17 @@
         <artifactId>large-bookstore-app-parent</artifactId>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
         <version>0.0.1</version>
-        <relativePath>../../../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>data-book-model</artifactId>
+    <artifactId>sql-statement</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>pattern-builder</artifactId>
             <version>0.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-            <artifactId>database-table-column</artifactId>
-            <version>0.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

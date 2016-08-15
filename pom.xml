@@ -6,8 +6,14 @@
 
     <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
     <artifactId>large-bookstore-app-parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging>
+
+    <properties>
+        <base-dir>E:/Sandbox/large-bookstore-app/</base-dir>
+    </properties>
+
+
 
     <modules>
         <!-- data-component -->
@@ -15,9 +21,13 @@
 
         <!-- data-common-component -->
         <module>data-common-component/data-bookstore-models/data-book-model</module>
+        <module>data-common-component/sql-statement</module>
 
         <!-- pattern-components -->
         <module>pattern-components/builder/builder-service</module>
+        <module>pattern-components/visitor/visitor-pattern</module>
+        <module>pattern-components/iterator/database-table-column-service</module>
+
     </modules>
     
 </project>
