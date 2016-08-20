@@ -6,7 +6,7 @@ import com.mkcoder.mycodingblog.largebookstore.model.Book;
 /**
  * builds a book with the property set
  */
-public final class BookBuilder implements Builder<Book> {
+public class BookBuilder implements Builder<Book> {
 
 
     public String description;

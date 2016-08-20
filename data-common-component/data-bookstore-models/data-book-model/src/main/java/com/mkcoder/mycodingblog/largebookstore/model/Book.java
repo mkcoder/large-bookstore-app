@@ -1,6 +1,9 @@
 package com.mkcoder.mycodingblog.largebookstore.model;
 
 import com.mkcoder.mycodingblog.largebookstore.builder.BookBuilder;
+import com.mkcoder.mycodingblog.largebookstore.database.table.AbstractDatabaseTable;
+
+import java.lang.reflect.Field;
 
 /**
  * A book model to represent a book
@@ -13,7 +16,7 @@ import com.mkcoder.mycodingblog.largebookstore.builder.BookBuilder;
  * price text
  * description text
  */
-public class Book {
+public class Book extends AbstractDatabaseTable {
 
     private int id;
     private String title;
@@ -66,5 +69,10 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public Field[] getFields() {
+        return this.getClass().getDeclaredFields();
     }
 }

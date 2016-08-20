@@ -3,7 +3,7 @@ package com.mkcoder.mycodingblog.largebookstore.sql.statement;
 import com.mkcoder.mycodingblog.largebookstore.sql.statement.builder.SqlBuilder;
 
 /**
- * This represents a com.mkcoder.mycodingblog.largebookstore.sql.statement.SqlStatement
+ * This represents a com.mkcoder.mycodingblog.largebookstore.sql.statement.SqlStatementBuilder
  * Language:
  * S -> select <column-name-or-names>
  * column-name-or-names -> [column-name] <from-clause>
@@ -15,7 +15,7 @@ import com.mkcoder.mycodingblog.largebookstore.sql.statement.builder.SqlBuilder;
  * ...
  *
  */
-public class SqlStatement implements SqlBuilder<String> {
+public class SqlStatementBuilder implements SqlBuilder<String> {
 
     private final SelectStatement select;
     private final FromStatement from;
@@ -23,7 +23,7 @@ public class SqlStatement implements SqlBuilder<String> {
     private final JoinStatement join;
     private final GroupByStatement groupBy;
 
-    public SqlStatement(SelectStatement select, FromStatement from, WhereStatement where, JoinStatement join, GroupByStatement groupBy) {
+    public SqlStatementBuilder(SelectStatement select, FromStatement from, WhereStatement where, JoinStatement join, GroupByStatement groupBy) {
         this.select = select;
         this.from = from;
         this.where = where;
@@ -39,6 +39,5 @@ public class SqlStatement implements SqlBuilder<String> {
         sb.append(join.build());
         sb.append(groupBy.build());
         return sb.toString();
-
     }
 }
