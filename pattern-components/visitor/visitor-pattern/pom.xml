@@ -5,26 +5,12 @@
     <parent>
         <artifactId>large-bookstore-app-parent</artifactId>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>0.0.1</version>
+        <version>${parent-version}</version>
+        <relativePath>../../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pattern-visitor</artifactId>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.spockframework/spock-core -->
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-            <version>1.1-groovy-2.4-rc-1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.9.5</version>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
+    <version>${pattern-visitor-version}</version>
 
 </project>

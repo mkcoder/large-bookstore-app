@@ -6,8 +6,9 @@
 
     <parent>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>0.0.2</version>
         <artifactId>large-bookstore-app-parent</artifactId>
+        <version>${parent-version}</version>
+        <relativePath>../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
 
     <artifactId>book-data-access</artifactId>
