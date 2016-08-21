@@ -23,7 +23,7 @@
 >
 >-----
 >## todos
->-  create a parent pom with versions in it
+>- [X]  create a parent pom with versions in it
 
 > ----------
       
