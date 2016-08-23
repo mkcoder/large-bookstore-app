@@ -1,3 +1,10 @@
+# 8/22/2016 -- Some release and future update note
+> I'll try and put this on my blog as well and make a post about where i want to take this the beta release of the
+> large-bookstore-app will be using JDBCTeamplate and/or NamedJDBCTtemplate and a custom SQLBuilder that i will create amd try to pull out into a separate project on github
+> and then the future release of this app will completely remove this and rely only Spring Data and other such features,
+> if you are wondering why? because i'll be learning those technologies in the mean time :P
+
+
 # Version 0.0.3
 
 >## new features:
