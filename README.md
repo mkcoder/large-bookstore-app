@@ -1,8 +1,8 @@
 # 8/22/2016 -- Some release and future update note
-> I'll try and put this on my blog as well and make a post about where i want to take this the beta release of the
-> large-bookstore-app will be using JDBCTeamplate and/or NamedJDBCTtemplate and a custom SQLBuilder that i will create amd try to pull out into a separate project on github
-> and then the future release of this app will completely remove this and rely only Spring Data and other such features,
-> if you are wondering why? because i'll be learning those technologies in the mean time :P
+> I'll try and put this on my blog as well and make a post about where i want to take the beta release ***(fingers crossed for end of September or middle of October)*** of the
+> large-bookstore-app. For now i'm thinking about using JDBCTeamplate and/or NamedJDBCTtemplate and a custom SQLBuilder that i will  create and I will try to pull out the project into a separate repo and make it avialable on github.
+> Then the future release of this app will completely remove the use of these two dependencies and rely only on (Spring Data)[http://projects.spring.io/spring-data/] and other frameworks.
+> If you are wondering why? because i'll be learning those technologies in the mean time 😛
 
 
 # Version 0.0.3
