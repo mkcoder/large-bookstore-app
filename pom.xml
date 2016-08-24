@@ -20,8 +20,10 @@
         <database-table-column>${parent-version}</database-table-column>
 
         <data-book-model-version>${parent-version}</data-book-model-version>
+        <book-data-version>${parent-version}</book-data-version>
 
         <basic-repository-version>${parent-version}</basic-repository-version>
+        <book-doa-version>${parent-version}</book-doa-version>
     </properties>
 
     <dependencies>

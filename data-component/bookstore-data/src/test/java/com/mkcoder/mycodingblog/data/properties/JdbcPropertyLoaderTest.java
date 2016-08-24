@@ -19,9 +19,9 @@ public class JdbcPropertyLoaderTest {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext(path);
         JdbcPropertyLoader propertyLoader = context.getBean(JdbcPropertyLoader.class);
-        assertEquals("abc123", propertyLoader.getJdbcPassword());
+        assertEquals("root", propertyLoader.getJdbcPassword());
         assertEquals("root", propertyLoader.getJdbcUsername());
-        assertEquals("null", propertyLoader.getJdbcUrl());
+        assertEquals("jdbc:mysql://localhost:3306/very_large_bookstore", propertyLoader.getJdbcUrl());
 
     }
 

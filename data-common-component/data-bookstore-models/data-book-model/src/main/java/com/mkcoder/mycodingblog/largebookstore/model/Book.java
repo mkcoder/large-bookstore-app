@@ -75,4 +75,15 @@ public class Book extends AbstractDatabaseTable {
     public Field[] getFields() {
         return this.getClass().getDeclaredFields();
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", price='" + price + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
