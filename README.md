@@ -1,3 +1,9 @@
+# Version 0.0.4
+
+>## update 
+> - i added a new test to make sure the JDBCTeamplte configuration is working it is way to coupled and very unstable right now, which > i don't like at all, hey the build runs fine :). Will try to decouple the implementation of the repository and the doas, from next 
+> version on forward we will only use the repository pattern, but for this verison we will have DOAs in.
+
 # 8/22/2016 -- Some release and future update note
 > I'll try and put this on my blog as well and make a post about where i want to take the beta release ***(fingers crossed for end of September or middle of October)*** of the
 > large-bookstore-app. For now i'm thinking about using JDBCTeamplate and/or NamedJDBCTtemplate and a custom SQLBuilder that i will  create and I will try to pull out the project into a separate repo and make it avialable on github.
