@@ -1,8 +1,18 @@
 # Version 0.0.4
 
 >## update 
-> - i added a new test to make sure the JDBCTeamplte configuration is working it is way to coupled and very unstable right now, which > i don't like at all, hey the build runs fine :). Will try to decouple the implementation of the repository and the doas, from next 
+> - i added a new test to make sure the JDBCTeamplte configuration is working it is way to coupled and very unstable right now, which
+> i don't like at all, hey the build runs fine :). Will try to decouple the implementation of the repository and the doas, from next 
 > version on forward we will only use the repository pattern, but for this verison we will have DOAs in.
+
+-----
+>## todos
+>- [ ] remove the coupling of datasource and jdbc together
+>- [ ] create an interface that will use common resources
+>- [ ] start on a general SQLBuilder
+>- [ ] - look into composite pattern
+>- [ ] - look at example online
+>- [ ] - action plan
 
 # 8/22/2016 -- Some release and future update note
 > I'll try and put this on my blog as well and make a post about where i want to take the beta release ***(fingers crossed for end of September or middle of October)*** of the
