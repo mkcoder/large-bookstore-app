@@ -11,7 +11,7 @@
 
     <properties>
         <base-dir>E:/Sandbox/large-bookstore-app/</base-dir>
-        <parent-version>0.0.3</parent-version>
+        <parent-version>0.0.4</parent-version>
 
         <pattern-visitor-version>${parent-version}</pattern-visitor-version>
         <pattern-builder-version>${parent-version}</pattern-builder-version>
