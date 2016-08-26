@@ -28,14 +28,12 @@ public class BookDoaImplTest {
     @Before
     public void setUp() throws Exception {
         path = "application-context.xml";
-        context =
-                new ClassPathXmlApplicationContext(path);
+        context = new ClassPathXmlApplicationContext(path);
         bookDoa = context.getBean(BookDoaImpl.class);
     }
 
     @After
     public void tearDown() throws Exception {
-
     }
 
     @Test
@@ -58,5 +56,4 @@ public class BookDoaImplTest {
             System.out.println(b);
         }
     }
-    
 }

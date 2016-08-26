@@ -53,6 +53,7 @@
         <module>pattern-components/builder/builder-service</module>
         <module>pattern-components/visitor/visitor-pattern</module>
         <module>pattern-components/iterator/database-table-column-service</module>
+        <module>sql-statement-component/sql-statement</module>
 
     </modules>
     
