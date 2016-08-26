@@ -7,9 +7,10 @@
 
 ------------
 > ## General idea:
-> - we will have a SqlStatementVisitorHelper that will have a SqlStatementVisitor that can be injected into using IOC this SQLVisitor will know about we will also have a list of SqlClauseVisitor that will injected
- in the builder of this class we will have something like this:
- ```
+> we will have a SqlStatementVisitorHelper that will have a SqlStatementVisitor that can be injected into using IOC this SQLVisitor 
+> will know about we will also have a list of SqlClauseVisitor that will injected
+> in the builder of this class we will have something like this:
+~~~
  // SqlStatementVisitorHelper.java
  // could also be a factory or something???
  @Inject
@@ -20,11 +21,12 @@
            clause.accept(sqlStatementVisitor);
     }
  }
- ```
+ ~~~
 Here is a idea of how the SqlStatementVisitor should look like for:
  - Book
  - Recommended Book (think excerise)
- ```
+ 
+ ~~~
 // BookSqlStatementVisitor.java
 // this is a sample Book Visitor that will generate a sql statement
 // we can rub off the details later
@@ -96,6 +98,5 @@ public class SqlStatementVisitor ... implements a visitor pattern and also a bui
         }
             return statement.build();
       }
-
 }
-```
+~~~
