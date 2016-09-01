@@ -1,3 +1,18 @@
+# Version 0.0.5
+
+> ## roadblock
+> hit my first road block with the app, was able to ```mvn clean install``` from root directory but indiviual project were failing to install 
+> <sub><sup> sidenote will be on vaca until tuesday, hopefully figure out a versioning system for this, thinking about moving to gradle ```¯\_(ツ)_/¯``` </sub></sup>
+-----
+>## todos
+>- [ ] remove the coupling of datasource and jdbc together
+>- [X] create an interface that will use common resources
+>- [X] start on a general SQLBuilder
+>- [ ] - look into composite pattern
+>- [ ] - look at example online
+>- [X] - action plan
+
+-----
 # Version 0.0.4
 
 >## update 
