@@ -5,23 +5,22 @@
     <parent>
         <artifactId>large-bookstore-app-parent</artifactId>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>${parent-version}</version>
+        <version>0.0.5</version>
         <relativePath>../../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>data-book-model</artifactId>
-    <version>${data-book-model-version}</version>
 
     <dependencies>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>pattern-builder</artifactId>
-            <version>${pattern-builder-version}</version>
+            <version>0.0.5</version>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>database-table-column</artifactId>
-            <version>${database-table-column-version}</version>
+            <version>0.0.5</version>
         </dependency>
     </dependencies>
 

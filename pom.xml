@@ -6,12 +6,12 @@
 
     <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
     <artifactId>large-bookstore-app-parent</artifactId>
-    <version>${parent-version}</version>
+    <version>0.0.5</version>
     <packaging>pom</packaging>
 
     <properties>
         <base-dir>E:/Sandbox/large-bookstore-app/</base-dir>
-        <parent-version>0.0.4</parent-version>
+        <parent-version>0.0.5</parent-version>
 
         <pattern-visitor-version>${parent-version}</pattern-visitor-version>
         <pattern-builder-version>${parent-version}</pattern-builder-version>
@@ -39,6 +39,8 @@
             <version>1.9.5</version>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 
     <modules>
@@ -53,7 +55,7 @@
         <module>pattern-components/builder/builder-service</module>
         <module>pattern-components/visitor/visitor-pattern</module>
         <module>pattern-components/iterator/database-table-column-service</module>
-        <module>sql-statement-component/sql-statement</module>
+        <module>sql-statement-component/sql-statement-builder-standalone</module>
 
     </modules>
     

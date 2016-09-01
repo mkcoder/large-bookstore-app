@@ -7,12 +7,11 @@
     <parent>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
         <artifactId>large-bookstore-app-parent</artifactId>
-        <version>${parent-version}</version>
+        <version>0.0.5</version>
         <relativePath>../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
 
     <artifactId>book-data-access</artifactId>
-    <version>${book-data-version}</version>
 
     <dependencies>
         <dependency>
