@@ -1,3 +1,6 @@
+BUILD PROPERTIES
+[![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app)
+
 # Version 0.0.6
 > before going on my small break, i hit my first road block building this application.
 > this update address that issue, we are now using [maven-versions plugin](http://www.mojohaus.org/versions-maven-plugin/)
