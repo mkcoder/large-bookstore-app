@@ -10,13 +10,13 @@
         <relativePath>../../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
     <artifactId>basic-repository</artifactId>
-    <version>${basic-repository-version}</version>
+    <version>0.0.6</version>
 
     <dependencies>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>database-table-column</artifactId>
-            <version>0.0.4</version>
+            <version>0.0.5</version>
         </dependency>
     </dependencies>
 

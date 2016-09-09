@@ -7,11 +7,13 @@
     <parent>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
         <artifactId>large-bookstore-app-parent</artifactId>
-        <version>0.0.5</version>
+        <version>0.0.6</version>
         <relativePath>../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
 
     <artifactId>book-data-access</artifactId>
+    <version>0.0.6</version>
+
 
     <dependencies>
         <dependency>
@@ -43,7 +45,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.3</version>
+            <version>6.0.4</version>
         </dependency>
     </dependencies>
 
