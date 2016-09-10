@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Iterator;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -27,9 +29,11 @@ public class BookTableTest {
     public void testThatBookTableIteratorGivesMeAllTheIteratorFieldNames() {
         Book bookTable = new Book(mockBookBuilder);
         String[] columnName = {"id", "title", "author", "price", "description" };
-        int index = 0;
-        for (String column : bookTable) {
-            assertEquals("Book iterable works", columnName[index++], column);
+        Iterator<String> it =  bookTable.iterator();
+        for (int i = 0; i < columnName.length; i++) {
+            String next = it.next();
+            if ( next == null ) break;
+            assertEquals("Book iterable works", columnName[i], next);
         }
     }
 
