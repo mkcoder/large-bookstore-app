@@ -1,9 +1,10 @@
 package com.mkcoder.mycodingblog.data.properties;
 
 import com.mkcoder.mycodingblog.configurations.DatabaseConfigurePropertyLoader;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.Objects;
 
 
 /**
@@ -12,8 +13,13 @@ import javax.inject.Named;
 @Named
 public class JdbcPropertyLoader {
 
-    @Autowired
     private DatabaseConfigurePropertyLoader databaseProps;
+
+    @Inject
+    public JdbcPropertyLoader(DatabaseConfigurePropertyLoader databaseProps) {
+        Objects.requireNonNull(databaseProps, "DatabaseConfigurePropertyLoader cam't be null");
+        this.databaseProps = databaseProps;
+    }
 
     public String getJdbcUrl() {
         return databaseProps.jdbcUrl();

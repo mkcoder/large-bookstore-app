@@ -8,8 +8,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import javax.inject.Inject;
-
 import static junit.framework.Assert.assertEquals;
 
 /**
@@ -22,7 +20,9 @@ public class JdbcPropertyLoaderTest {
     @Autowired
     private Environment env;
 
+    @Autowired
     private JdbcPropertyLoader props;
+
 
     @Test
     public void testIfPropertyFileLoadsCorrectValuesUsingSpringContext() {
@@ -33,8 +33,4 @@ public class JdbcPropertyLoaderTest {
 
     }
 
-    @Inject
-    public void setProps(JdbcPropertyLoader props) {
-        this.props = props;
-    }
 }
