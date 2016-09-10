@@ -1,33 +1,33 @@
 package com.mkcoder.mycodingblog.data.properties;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
+import com.mkcoder.mycodingblog.configurations.DatabaseConfigurePropertyLoader;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.inject.Inject;
+import javax.inject.Named;
+
 
 /**
  * Loads the jdbc drive, user name and jdbcPassword and returns this property
  */
-@Component
+@Named
 public class JdbcPropertyLoader {
 
-    @Value("${jdbc.url}")
-    private String jdbcUrl;
-    @Value("${jdbc.password}")
-    private String jdbcPassword;
-    @Value("${jdbc.username}")
-    private String jdbcUsername;
+    @Autowired
+    private DatabaseConfigurePropertyLoader databaseProps;
 
     public String getJdbcUrl() {
-        return jdbcUrl;
+        return databaseProps.jdbcUrl();
     }
 
     public String getJdbcPassword() {
-        return jdbcPassword;
+        return databaseProps.jdbcPassword();
     }
 
     public String getJdbcUsername() {
-        return jdbcUsername;
+        return databaseProps.jdbcUsername();
+    }
+
+    public String getJdbcDriver() {
+        return databaseProps.jdbcDriver();
     }
 }

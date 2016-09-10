@@ -1,1 +1,5 @@
 echo argument is $(argument)
+
+ mvn versions:set -DnewVersion=0.0.7   -DartifactId=*  -DgroupId=* -DoldVersion=* -DprocessDependencies=false
+ mvn versions:use-latest-versions -DallowMinorUpdates=false -DexcludeReactor=false -DallowMajorUpdates=false -DallowIncrementalUpdates=false -DallowSnapshots=false
+

@@ -1,29 +1,40 @@
 package com.mkcoder.mycodingblog.data.properties;
 
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Component;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import static org.junit.Assert.assertEquals;
+import javax.inject.Inject;
+
+import static junit.framework.Assert.assertEquals;
 
 /**
  *a simple test that checks if the PropertyLoader loads the actually file from the disk
  */
-@Component
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {com.mkcoder.mycodingblog.configurations.DatabaseConfigurePropertyLoader.class, JdbcPropertyLoader.class}, loader = AnnotationConfigContextLoader.class )
 public class JdbcPropertyLoaderTest {
+
+    @Autowired
+    private Environment env;
+
+    private JdbcPropertyLoader props;
 
     @Test
     public void testIfPropertyFileLoadsCorrectValuesUsingSpringContext() {
-            String path = "application-context.xml";
-        ApplicationContext context =
-                new ClassPathXmlApplicationContext(path);
-        JdbcPropertyLoader propertyLoader = context.getBean(JdbcPropertyLoader.class);
-        assertEquals("root", propertyLoader.getJdbcPassword());
-        assertEquals("root", propertyLoader.getJdbcUsername());
-        assertEquals("jdbc:mysql://localhost:3306/very_large_bookstore", propertyLoader.getJdbcUrl());
+        assertEquals(env.getProperty("jdbc.driver"), props.getJdbcDriver());
+        assertEquals(env.getProperty("jdbc.url"), props.getJdbcUrl());
+        assertEquals(env.getProperty("jdbc.password"), props.getJdbcPassword());
+        assertEquals(env.getProperty("jdbc.username"), props.getJdbcUsername());
 
     }
 
-
+    @Inject
+    public void setProps(JdbcPropertyLoader props) {
+        this.props = props;
+    }
 }

@@ -6,12 +6,12 @@
 
     <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
     <artifactId>large-bookstore-app-parent</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <packaging>pom</packaging>
 
     <properties>
         <base-dir>E:/Sandbox/large-bookstore-app/</base-dir>
-        <parent-version>0.0.6</parent-version>
+        <parent-version>0.0.7</parent-version>
 
         <pattern-visitor-version>${parent-version}</pattern-visitor-version>
         <pattern-builder-version>${parent-version}</pattern-builder-version>
@@ -50,6 +50,9 @@
     </dependencies>
 
     <modules>
+        <!-- configurations -->
+        <module>configurations</module>
+
         <!-- data-component -->
         <module>data-component/bookstore-data</module>
 
