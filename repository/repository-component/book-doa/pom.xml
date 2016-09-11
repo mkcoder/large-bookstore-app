@@ -49,12 +49,12 @@
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>book-data-access</artifactId>
-            <version>0.0.7</version>
+            <version>0.0.8</version>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>data-book-model</artifactId>
-            <version>0.0.7</version>
+            <version>0.0.8</version>
         </dependency>
     </dependencies>
 
