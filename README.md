@@ -1,10 +1,13 @@
 BUILD PROPERTIES
 
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
+# Version 0.0.8
+> So the architecture of our code base has evolved from small components to basically [.NET recommended architecture](https://msdn.microsoft.com/en-us/library/ee658099.aspx?f=255&MSPPError=-2147217396) which i believe is a lot better than most 
+> Java architecture i have seen so far ```¯\_(ツ)_/¯``` so i will update the wiki with the new code base.
+
 # Version 0.0.7
-> I am here to bring you good news, I have completely removed the static file dependency and am now using Spring (propertysource)[http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html]. Also updated Travis-CI to no longer skip test and so we test in our CI as well which is awesome. This has been one of my best commit I believe. 
-
-
+> I am here to bring you good news, I have completely removed the static file dependency and am now using Spring 
+> [propertysource](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html). Also updated Travis-CI to no longer skip test and so we test in our CI as well which is awesome. This has been one of my best commit I believe. 
 
 # Version 0.0.6
 > before going on my small break, i hit my first road block building this application.
