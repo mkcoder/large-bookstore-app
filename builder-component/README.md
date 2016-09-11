@@ -1,1 +1,0 @@
--- anything related to building SQL, Order, Templates and other such things should go here

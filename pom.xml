@@ -6,12 +6,12 @@
 
     <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
     <artifactId>large-bookstore-app-parent</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8</version>
     <packaging>pom</packaging>
 
     <properties>
         <base-dir>E:/Sandbox/large-bookstore-app/</base-dir>
-        <parent-version>0.0.7</parent-version>
+        <parent-version>0.0.8</parent-version>
 
         <pattern-visitor-version>${parent-version}</pattern-visitor-version>
         <pattern-builder-version>${parent-version}</pattern-builder-version>
@@ -53,23 +53,36 @@
         <!-- configurations -->
         <module>configurations</module>
 
-        <!-- data-component -->
-        <module>data-component/bookstore-data</module>
+        <!-- models -->
+        <module>models/pattern-components/builder/builder-service</module>
+        <module>models/pattern-components/visitor/visitor-pattern</module>
+        <module>models/pattern-components/iterator/database-table-column-service</module>
+        <module>models/data-bookstore-models/book-model</module>
 
-        <!-- data-common-component -->
-        <module>data-common-component/data-bookstore-models/data-book-model</module>
-        <module>data-common-component/sql-statement</module>
+        <!-- repository -->
+        <module>repository/repository-component/book-doa</module>
 
-        <!-- pattern-components -->
-        <module>pattern-components/builder/builder-service</module>
-        <module>pattern-components/visitor/visitor-pattern</module>
-        <module>pattern-components/iterator/database-table-column-service</module>
-        <module>sql-statement-component/sql-statement-builder-standalone</module>
+        <!-- services -->
+        <module>services/data-component/bookstore-data</module>
+
+        <!-- etc -->
+        <module>etc/sql-statement-component/sql-statement</module>
+        <module>etc/sql-statement-component/sql-statement-builder-standalone</module>
+
 
     </modules>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>

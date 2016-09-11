@@ -8,11 +8,12 @@
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
         <artifactId>large-bookstore-app-parent</artifactId>
         <version>0.0.8</version>
-        <relativePath>../../large-bookstore-app/pom.xml</relativePath>
+        <relativePath>../../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
 
-    <artifactId>configurations</artifactId>
+    <artifactId>book-data-access</artifactId>
     <version>0.0.8</version>
+
 
     <dependencies>
         <dependency>
@@ -31,9 +32,30 @@
             <version>4.3.2.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
+        <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>configurations</artifactId>
+            <version>0.0.7</version>
         </dependency>
     </dependencies>
 

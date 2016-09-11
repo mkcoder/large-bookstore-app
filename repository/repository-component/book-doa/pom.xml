@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>large-bookstore-app-parent</artifactId>
+        <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+        <version>0.0.8</version>
+        <relativePath>../../../pom.xml</relativePath>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <artifactId>large-bookstore-app-parent</artifactId>
-        <version>0.0.8</version>
-        <relativePath>../../large-bookstore-app/pom.xml</relativePath>
-    </parent>
-
-    <artifactId>configurations</artifactId>
+    <artifactId>book-doa</artifactId>
     <version>0.0.8</version>
+
 
     <dependencies>
         <dependency>
@@ -31,9 +31,30 @@
             <version>4.3.2.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>book-data-access</artifactId>
+            <version>0.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>data-book-model</artifactId>
+            <version>0.0.7</version>
         </dependency>
     </dependencies>
 
