@@ -52,6 +52,7 @@
     <modules>
         <!-- configurations -->
         <module>configurations</module>
+        <module>loader</module>
 
         <!-- models -->
         <module>models/pattern-components/builder/builder-service</module>
@@ -63,7 +64,6 @@
         <module>repository/book-repository</module>
 
         <!-- services -->
-        <module>services/data-component/bookstore-data</module>
 
         <!-- etc -->
         <module>etc/sql-statement-component/sql-statement</module>

@@ -8,10 +8,10 @@
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
         <artifactId>large-bookstore-app-parent</artifactId>
         <version>0.0.9</version>
-        <relativePath>../../../../large-bookstore-app/pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>book-data-access</artifactId>
+    <artifactId>loader</artifactId>
     <version>0.0.9</version>
 
 

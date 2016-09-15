@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>database-table-column</artifactId>
-            <version>0.0.5</version>
+            <version>0.0.9</version>
         </dependency>
     </dependencies>
 
