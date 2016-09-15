@@ -1,4 +1,4 @@
-package com.mkcoder.mycodingblog.data.properties;
+package com.mkcoder.mycodingblog.largebookstore.data.properties;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 

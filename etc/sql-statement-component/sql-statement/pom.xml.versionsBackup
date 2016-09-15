@@ -10,7 +10,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sql-statement-builder-standalone</artifactId>
+    <artifactId>sql-statement</artifactId>
     <version>0.0.9</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>pattern-builder</artifactId>
+            <version>0.0.8</version>
+        </dependency>
+    </dependencies>
 
 </project>

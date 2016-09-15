@@ -6,7 +6,7 @@
 
     <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
     <artifactId>large-bookstore-app-parent</artifactId>
-    <version>0.0.8</version>
+    <version>0.0.9</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -60,7 +60,7 @@
         <module>models/data-bookstore-models/book-model</module>
 
         <!-- repository -->
-        <module>repository/repository-component/book-doa</module>
+        <module>repository/book-repository</module>
 
         <!-- services -->
         <module>services/data-component/bookstore-data</module>

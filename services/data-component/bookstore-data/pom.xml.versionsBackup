@@ -55,7 +55,7 @@
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>configurations</artifactId>
-            <version>0.0.9</version>
+            <version>0.0.8</version>
         </dependency>
     </dependencies>
 

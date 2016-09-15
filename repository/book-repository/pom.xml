@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>large-bookstore-app-parent</artifactId>
+        <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+        <version>0.0.9</version>
+        <relativePath>../../../large-bookstore-app/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>book-repository</artifactId>
+    <version>0.0.9</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.openjpa/openjpa -->
+        <dependency>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>book-model</artifactId>
+            <version>0.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.3.2.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>configurations</artifactId>
+            <version>0.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>book-data-access</artifactId>
+            <version>0.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>book-data-access</artifactId>
+            <version>0.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>book-data-access</artifactId>
+            <version>0.0.9</version>
+        </dependency>
+    </dependencies>
+</project>
