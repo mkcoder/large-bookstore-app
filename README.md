@@ -1,6 +1,12 @@
 BUILD PROPERTIES
 
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
+# Version 0.0.9
+> In this update we added a [JPA](http://openjpa.apache.org/) for the Book table in the repoistory project. Currently we are using a 
+> service from our repository and that is no-no, so we are going to pull this service out and create a new project that will do all 
+> the loading of the configurations.
+
+
 # Version 0.0.8
 > So the architecture of our code base has evolved from small components to basically [.NET recommended architecture](https://msdn.microsoft.com/en-us/library/ee658099.aspx?f=255&MSPPError=-2147217396) which i believe is a lot better than most 
 > Java architecture i have seen so far ```¯\_(ツ)_/¯``` so i will update the wiki with the new code base.
