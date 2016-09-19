@@ -1,6 +1,12 @@
 BUILD PROPERTIES
 
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
+# Update 18-Sept-16
+### -- Web App coming soon, fingers crossed
+> So there won't be any new update this week on this branch, mostly will be using the nightly build branch throughout the week because > i am working on an experimental feature, so things might break and not work without fiddle with java code, which i don't want.
+> right now i am trying to get our current project as-is deployed to a server using Grizzly, it is causing couple of issues
+> with DI and i am trying to figure it out.
+
 # Version 0.0.9
 > In this update we added a [JPA](http://openjpa.apache.org/) for the Book table in the repoistory project. Currently we are using a 
 > service from our repository and that is no-no, so we are going to pull this service out and create a new project that will do all 
