@@ -1,8 +1,7 @@
-package com.mkcoder.mycodingblog.largebookstore.data.properties;
+package com.mkcoder.mycodingblog.largebookstore.properties.data;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import javax.inject.Inject;
 import java.util.Objects;
 
 /**
@@ -12,7 +11,6 @@ public class DataSource {
 
     private BasicDataSource dataSource;
 
-    @Inject
     public DataSource(BasicDataSource dataSource) {
         Objects.requireNonNull(dataSource, "BasicDataSource is a required field");
         this.dataSource = dataSource;

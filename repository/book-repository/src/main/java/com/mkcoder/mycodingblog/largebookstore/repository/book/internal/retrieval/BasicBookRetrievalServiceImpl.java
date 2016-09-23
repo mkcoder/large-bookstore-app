@@ -1,32 +1,25 @@
 package com.mkcoder.mycodingblog.largebookstore.repository.book.internal.retrieval;
 
-import com.mkcoder.mycodingblog.largebookstore.data.properties.JdbcPropertyLoader;
 import com.mkcoder.mycodingblog.largebookstore.model.Book;
 import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalService;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.jvnet.hk2.annotations.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.sql.DataSource;
 import java.util.List;
-import java.util.Objects;
 
+@Service
 public class BasicBookRetrievalServiceImpl implements BasicBookRetrievalService {
 
-    private JdbcPropertyLoader jdbcPropertyLoader;
     private EntityManagerFactory emFactory;
     private EntityManager manager;
     private CriteriaBuilder cb;
-    private LocalContainerEntityManagerFactoryBean factoryBean;
 
     public BasicBookRetrievalServiceImpl() {
-        factoryBean = new LocalContainerEntityManagerFactoryBean();
-        factoryBean.setDataSource(getDataSource());
-        factoryBean.setPersistenceUnitName("LargeBookStoreBookJPA");
-        emFactory = factoryBean.getNativeEntityManagerFactory();
+        emFactory = Persistence.createEntityManagerFactory("LargeBookStoreBookJPA");
         manager = emFactory.createEntityManager();
         cb = manager.getCriteriaBuilder();
     }
@@ -46,19 +39,5 @@ public class BasicBookRetrievalServiceImpl implements BasicBookRetrievalService 
     @Override
     public List<Book> find(CriteriaQuery criteria) {
         return manager.createQuery(criteria).getResultList();
-    }
-
-    public DataSource getDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(jdbcPropertyLoader.getJdbcDriver());
-        dataSource.setUrl(jdbcPropertyLoader.getJdbcUrl());
-        dataSource.setUsername(jdbcPropertyLoader.getJdbcUsername());
-        dataSource.setPassword(jdbcPropertyLoader.getJdbcPassword());
-        return dataSource;
-    }
-
-    public void setJdbcPropertyLoader(JdbcPropertyLoader jdbcPropertyLoader) {
-        Objects.requireNonNull(jdbcPropertyLoader, "DatabaseConfigurePropertyLoader is required");
-        this.jdbcPropertyLoader = jdbcPropertyLoader;
     }
 }

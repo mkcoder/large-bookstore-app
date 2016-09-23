@@ -57,6 +57,11 @@
             <artifactId>configurations</artifactId>
             <version>0.0.9</version>
         </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>configurations</artifactId>
+            <version>0.0.9</version>
+        </dependency>
     </dependencies>
 
 </project>

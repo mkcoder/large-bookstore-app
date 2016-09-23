@@ -1,0 +1,58 @@
+package com.mkcoder.mycodingblog.largebookstore.repository.book;
+
+import com.mkcoder.mycodingblog.largebookstore.configurations.DatabaseConfigurePropertyLoader;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.Database;
+import org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
+
+@Configuration
+@Named
+public class EntityManagerConfiguration {
+
+    private LocalContainerEntityManagerFactoryBean factoryBean;
+
+    @Named("databaseConfigurePropertyLoader")
+    @Inject
+    private DatabaseConfigurePropertyLoader databaseConfigurePropertyLoader;
+
+    @Bean
+    public EntityManagerFactory entityManagerFactory() {
+        factoryBean = new LocalContainerEntityManagerFactoryBean();
+        factoryBean.setDataSource(getDataSource());
+        factoryBean.setJpaVendorAdapter(jpaAdapter());
+        factoryBean.setPersistenceUnitName("LargeBookStoreBookJPA");
+        factoryBean.setPackagesToScan("com.mkcoder.mycodingblog.largebookstore.model");
+        factoryBean.setPersistenceXmlLocation("/resources/META-INF/persistence.xml");
+
+        return factoryBean.getObject();
+
+    }
+
+    private JpaVendorAdapter jpaAdapter() {
+        OpenJpaVendorAdapter openJpaVendorAdapter = new OpenJpaVendorAdapter();
+        openJpaVendorAdapter.setDatabase(Database.MYSQL);
+        openJpaVendorAdapter.setShowSql(true);
+        openJpaVendorAdapter.setGenerateDdl(true);
+        return openJpaVendorAdapter;
+    }
+
+
+    public DataSource getDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(databaseConfigurePropertyLoader.jdbcDriver());
+        dataSource.setUrl(databaseConfigurePropertyLoader.jdbcUrl());
+        dataSource.setUsername(databaseConfigurePropertyLoader.jdbcUsername());
+        dataSource.setPassword(databaseConfigurePropertyLoader.jdbcPassword());
+        return dataSource;
+    }
+
+}

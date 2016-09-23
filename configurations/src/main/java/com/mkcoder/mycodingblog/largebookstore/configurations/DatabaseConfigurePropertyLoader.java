@@ -1,4 +1,4 @@
-package com.mkcoder.mycodingblog.configurations;
+package com.mkcoder.mycodingblog.largebookstore.configurations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
