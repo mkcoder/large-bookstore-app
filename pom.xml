@@ -65,10 +65,6 @@
 
         <!-- services -->
         <module>services/book-rest-service</module>
-
-        <!-- etc -->
-        <module>etc/sql-statement-component/sql-statement</module>
-        <module>etc/sql-statement-component/sql-statement-builder-standalone</module>
     </modules>
 
     <build>
