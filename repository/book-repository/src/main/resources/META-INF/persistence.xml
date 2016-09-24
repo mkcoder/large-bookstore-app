@@ -12,7 +12,8 @@
             <property name="openjpa.ConnectionUserName" value="root"/>
             <property name="openjpa.ConnectionPassword" value="root"/>
             <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property  name="openjpa.RuntimeUnenhancedClasses" value="supported" />
         </properties>
     </persistence-unit>
 </persistence>

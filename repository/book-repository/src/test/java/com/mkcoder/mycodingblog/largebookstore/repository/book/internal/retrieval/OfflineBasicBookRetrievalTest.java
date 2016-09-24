@@ -1,7 +1,7 @@
 package com.mkcoder.mycodingblog.largebookstore.repository.book.internal.retrieval;
 
 import com.mkcoder.mycodingblog.largebookstore.model.Book;
-import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalService;
+import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
 public class OfflineBasicBookRetrievalTest {
 
     @Mock
-    private BasicBookRetrievalService mockBasicBookRetrievalService;
+    private BasicBookRetrievalRepository mockBasicBookRetrievalRepository;
 
     @Before
     public void setUp() {
@@ -24,20 +24,20 @@ public class OfflineBasicBookRetrievalTest {
 
     @Test
     public void testGetAll() {
-        when(mockBasicBookRetrievalService.getAll()).thenReturn(new ArrayList<Book>());
-        assertEquals(0, mockBasicBookRetrievalService.getAll().size());
+        when(mockBasicBookRetrievalRepository.getAll()).thenReturn(new ArrayList<Book>());
+        assertEquals(0, mockBasicBookRetrievalRepository.getAll().size());
     }
 
     @Test
     public void testFind() {
-        when(mockBasicBookRetrievalService.find(1000)).thenReturn(null);
-        assertEquals(null, mockBasicBookRetrievalService.find(1000));
+        when(mockBasicBookRetrievalRepository.find(1000)).thenReturn(null);
+        assertEquals(null, mockBasicBookRetrievalRepository.find(1000));
     }
 
     @Test(expected = NullPointerException.class)
     public void testFindWithNullCriteriaThrowsException() {
-        when(mockBasicBookRetrievalService.find(null)).thenThrow(NullPointerException.class);
-        mockBasicBookRetrievalService.find(null);
+        when(mockBasicBookRetrievalRepository.find(null)).thenThrow(NullPointerException.class);
+        mockBasicBookRetrievalRepository.find(null);
     }
 
 

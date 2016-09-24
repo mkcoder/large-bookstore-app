@@ -39,4 +39,17 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.openjpa</groupId>
+                <artifactId>openjpa-maven-plugin</artifactId>
+                <configuration>
+                    <persistenceXmlFile>E:\Sandbox\large-bookstore-app\repository\book-repository\src\main\resources\META-INF\persistence.xml</persistenceXmlFile>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

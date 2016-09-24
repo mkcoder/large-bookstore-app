@@ -1,9 +1,9 @@
 package com.mkcoder.mycodingblog.largebookstore.repository.book.internal.retrieval;
 
 import com.mkcoder.mycodingblog.largebookstore.model.Book;
-import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalService;
-import org.jvnet.hk2.annotations.Service;
+import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalRepository;
 
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -11,14 +11,14 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
-@Service
-public class BasicBookRetrievalServiceImpl implements BasicBookRetrievalService {
+@Named
+public class BasicBookRetrievalRepositoryImpl implements BasicBookRetrievalRepository {
 
     private EntityManagerFactory emFactory;
     private EntityManager manager;
     private CriteriaBuilder cb;
 
-    public BasicBookRetrievalServiceImpl() {
+    public BasicBookRetrievalRepositoryImpl() {
         emFactory = Persistence.createEntityManagerFactory("LargeBookStoreBookJPA");
         manager = emFactory.createEntityManager();
         cb = manager.getCriteriaBuilder();

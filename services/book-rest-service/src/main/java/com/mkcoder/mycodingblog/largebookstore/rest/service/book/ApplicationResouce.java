@@ -1,15 +1,13 @@
 package com.mkcoder.mycodingblog.largebookstore.rest.service.book;
 
-import javax.ws.rs.core.Application;
-import java.util.HashSet;
-import java.util.Set;
+import com.mkcoder.mycodingblog.largebookstore.model.Book;
+import org.glassfish.jersey.server.ResourceConfig;
 
-public class ApplicationResouce extends Application {
-    @Override
-    public Set<Class<?>> getClasses() {
-        System.out.println("CALLED!");
-        Set<Class<?>> s = new HashSet<Class<?>>();
-        s.add(BookResource.class);
-        return s;
+public class ApplicationResouce extends ResourceConfig {
+
+    public ApplicationResouce() {
+        System.out.println("BookResource.ApplicationResouce called");
+        register(Book.class);
+        register(BookResource.class);
     }
 }

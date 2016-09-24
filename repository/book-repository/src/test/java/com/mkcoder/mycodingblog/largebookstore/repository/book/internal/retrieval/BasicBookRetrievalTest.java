@@ -13,11 +13,11 @@ import static junit.framework.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class BasicBookRetrievalTest {
 
-    private BasicBookRetrievalServiceImpl target;
+    private BasicBookRetrievalRepositoryImpl target;
 
     @Before
     public void setUp() throws Exception {
-        target = new BasicBookRetrievalServiceImpl();
+        target = new BasicBookRetrievalRepositoryImpl();
     }
 
     @After
