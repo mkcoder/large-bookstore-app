@@ -46,13 +46,13 @@
             <artifactId>versions-maven-plugin</artifactId>
             <version>2.3</version>
         </dependency>
-
     </dependencies>
 
     <modules>
         <!-- configurations -->
         <module>configurations</module>
         <module>loader</module>
+        <module>runner</module>
 
         <!-- models -->
         <module>models/pattern-components/builder/builder-service</module>
@@ -64,16 +64,43 @@
         <module>repository/book-repository</module>
 
         <!-- services -->
+        <module>services/book-rest-service</module>
 
         <!-- etc -->
         <module>etc/sql-statement-component/sql-statement</module>
         <module>etc/sql-statement-component/sql-statement-builder-standalone</module>
-
-
     </modules>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.openjpa</groupId>
+                <artifactId>openjpa-maven-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>enhancer</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.3.4.RC1</version>
+                <configuration>
+                    <skip>true</skip>
+                    <webApp>
+                        <contextPath>/rest</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -103,6 +130,23 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <skip>true</skip>
+                    <mainClass>com.mkcoder.mycodingblog.largebookstore.runner.web.GrizzlyRunner</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

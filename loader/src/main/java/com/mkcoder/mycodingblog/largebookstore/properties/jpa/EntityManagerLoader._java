@@ -1,0 +1,27 @@
+package com.mkcoder.mycodingblog.largebookstore.properties.jpa;
+
+import com.mkcoder.mycodingblog.largebookstore.configurations.EntityManagerConfiguration;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.persistence.EntityManagerFactory;
+import java.util.Objects;
+
+/**
+ * Helps with laoding the JPA properties from a Spring Bean rather than a xml file
+ */
+@Named
+public class EntityManagerLoader {
+
+    private EntityManagerConfiguration entityManagerConfiguration;
+
+    @Inject
+    public EntityManagerLoader(@Named("entityManagerConfiguration") EntityManagerConfiguration entityManagerConfiguration) {
+        Objects.requireNonNull(entityManagerConfiguration, "EntityManager is required!");
+        this.entityManagerConfiguration = entityManagerConfiguration;
+    }
+
+    public EntityManagerFactory getEntityManager() {
+        return entityManagerConfiguration.entityManagerFactory();
+    }
+}
