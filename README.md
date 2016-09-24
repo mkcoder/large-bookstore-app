@@ -1,6 +1,15 @@
-BUILD PROPERTIES
-
+# Release Notes
+### BUILD Status
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
+# Version 0.1.0
+> okay the web app service is ready to go, this was really painful process but at the end of the day everything is working. 
+> It feels like a duct tape solution, so in the upcoming weeks we will be make removing code and modules we don't need. Every project 
+> will also have a parent pom.xml and that will have a parent pom. We will manage dependencies enforece one way data flow.
+> Will add more but to run the app after setting it up you should do the following:
+ 1. change the persistence.xml to match your database
+ 2. run the following code via the command line/terminal:
+```mvn clean install jetty:run```
+
 # Update 18-Sept-16
 ### -- Web App coming soon, fingers crossed
 > So there won't be any new update this week on this branch, mostly will be using the nightly build branch throughout the week because > i am working on an experimental feature, so things might break and not work without fiddle with java code, which i don't want.
