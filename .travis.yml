@@ -8,6 +8,6 @@ deploy:
   api-key:
     secure: 90d7addb-39d5-4e41-9756-207593de4867
   run:
-    - "java $JAVA_OPTS -jar target/dependency/jetty-runner.jar --port $PORT services/*/target/*.war"
+    - "mvn package && java $JAVA_OPTS -jar target/dependency/jetty-runner.jar --port $PORT services/*/target/*.war"
   app: large-bookstore-app
   repo: mkcoder/large-bookstore-app
