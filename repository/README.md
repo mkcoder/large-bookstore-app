@@ -1,5 +1,3 @@
-# this will be removed to the repository readme
-
 we will store all the repository in here and implement a common repository throughout
 note every class must implement a repository, and that repository must be in the pattern-component
 #example: 
