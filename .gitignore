@@ -53,3 +53,5 @@ data-component/bookstore-data/bookstore-data-access.iml
 lib/
 .settings/
 target/
+node_modules/
+tools/

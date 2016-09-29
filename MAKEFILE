@@ -1,6 +1,6 @@
 echo argument is $(argument)
 
- mvn versions:set -DnewVersion=0.1.0   -DartifactId=*  -DgroupId=* -DoldVersion=* -DprocessDependencies=false
+ mvn versions:set -DnewVersion=0.1.1   -DartifactId=*  -DgroupId=* -DoldVersion=* -DprocessDependencies=false
  mvn versions:use-latest-versions -DallowMinorUpdates=false -DexcludeReactor=false -DallowMajorUpdates=false -DallowIncrementalUpdates=false -DallowSnapshots=false
  mvn versions:use-next-versions  -DexcludeReactor=false
  mvn clean install jetty:run
