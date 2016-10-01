@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import App from './components/app.jsx';
+import App from './components/App.jsx';
 import Homepage from './components/homepage/Homepage.jsx';
 
 

@@ -1,0 +1,21 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container .page-header .logo,  .container .page-header .search-bar, .container .page-header .search-bar{
+  display: flex;
+}
+
+.container .page-header:after {
+  clear: both;
+  display: block;
+}
+
+.container .page-header .logo {
+  flex: 10;
+}
+
+.container .page-header .user-info {
+  flex: 5;
+}
