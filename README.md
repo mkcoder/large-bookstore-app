@@ -1,6 +1,9 @@
 # Release Notes
 ### BUILD Status
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
+# Update 03-Oct-16
+> Been sick for the past couple of days, will update once i feel better. Been doing a lot of C programming, and Streams in java. Did start on a ruby script that i will use as a MAKEFILE.
+
 # Version 0.1.0
 > okay the web app service is ready to go, this was really painful process but at the end of the day everything is working. 
 > It feels like a duct tape solution, so in the upcoming weeks we will be make removing code and modules we don't need. Every project 
