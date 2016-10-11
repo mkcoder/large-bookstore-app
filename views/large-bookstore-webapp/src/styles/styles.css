@@ -3,6 +3,185 @@
   margin: 0 auto;
 }
 
+/**
+*            General styles
+*/
+
+    /**
+    *            form styles
+    */
+.form {
+  outline: none;
+}
+
+.form.dropdown-list select {
+  padding: 5px 20px;
+  line-height: 1.5em;
+  font-size: 14px;
+  border: 1px solid #eee;
+  outline: none;
+  cursor: pointer;
+}
+
+.form.dropdown-list select:hover {
+  border: 1px solid rgba(52, 73, 94, 0.25);
+}
+
+.form.dropdown-list select option {
+  padding: 5px;
+}
+
+.form.input-text {
+  padding: 5px 20px;
+  font-size: 18px;
+  color: #17202A;
+  font-weight: 400;
+  border: 1px solid #eee;
+}
+
+/**
+* Logo + User styles
+*/
+
+header .logo {
+  font-size: 1.5em;
+  line-height: .5em;
+  font-family: 'Indie Flower', cursive;
+  font-weight: lighter;
+  text-transform: capitalize;
+  float: left;
+}
+
+header .logo h1 {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+header .logo h4 {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-left: 60px;
+}
+
+header .user-info {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .user-info li {
+  justify-content: flex-start;
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+header .user-info li .username {
+  padding: 0px;
+  margin: 0px;
+  justify-content: flex-start;
+}
+
+header .user-info ul li ul {
+  display: none;
+  padding-left: 0px;
+  background: #eee;
+}
+
+header .user-info ul li ul li {
+  padding: 10px;
+}
+
+header .user-info ul li ul li:hover {
+  background: #ddd;
+}
+
+header .user-info ul li ul li a {
+  color: #000;
+}
+
+header .user-info ul li:hover ul {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  position: absolute;
+
+}
+
+header .user-info li a {
+  text-decoration: none;
+}
+
+header .user-info .shopping-cart {
+  background: #eee;
+  border-radius: 100px;
+  display: flex;
+  padding-bottom: 0px;
+}
+
+header .user-info .shopping-cart .shopping-cart-icon {
+  padding: 10px;
+
+}
+
+header .user-info .shopping-cart .item-badge {
+  background: #3498DB;
+  color: #F6F6F6;
+  float: right;
+  border-radius: 100px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: inset 3px 5px 10px rgba(23, 32, 42,1);
+}
+
+header .user-info .shopping-cart .item-badge:hover {
+  background: #21618C;
+}
+
+/*
+* Search bar styles
+*/
+header .search-bar form {
+  display: flex;
+}
+
+.search-bar .book-genre {
+  flex: 1;
+}
+
+.search-bar .book-genre select {
+  height: 50px;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+
+.search-bar input[type=search] {
+  flex: 7;
+}
+
+.search-bar .search-button {
+  flex: 1;
+  width: 35px;
+  background: white;
+  border: 1px solid #eee;
+  border-left: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-bar .search-button i {
+  font-size: 1.5em;
+  color: #000;
+}
+
+.search-bar .search-button:hover i {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.search-bar .search-button:hover {
+  background: #FBFCFC;
+}
 
 /*
 *    TOP NAV BAR STYLES
@@ -34,6 +213,51 @@ nav#top-nav-bar li:hover {
   background: #424949;
 }
 
+section.homepage-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.promotion ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;;
+}
+
+.promotion ul li {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+.promotion ul li .info-box {
+  float: right;
+  padding-left: 10px;
+}
+
+.promotion ul li .info-box h4 {
+  margin-top: 0;
+}
+
+.promotion ul li .info-box p {
+  width: 150px;
+  word-wrap: break-word;
+}
+
+.promotion ul li .info-box .price-box {
+  display: flex;
+  background: #D35400;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.promotion ul li .info-box .price-box .quick-view-btn {
+  background: #F1C40F;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 960px) {
   nav#top-nav-bar ul {

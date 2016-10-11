@@ -10,19 +10,20 @@ class UserInfoBox extends React.Component {
           </section>
           <section>
             <ul>
-                <li><h3 className="user-info username">Your Name</h3></li>
-                <li>
+                <li><h3 className="user-info username">John Doe</h3></li>
+                <li className="user-info-nav-bar">
                     <a href="">Quick links</a>
                     <ul>
                         <li><a href="">Current order status</a></li>
                         <li><a href="">Message center</a></li>
                         <li><a href="">View order history</a></li>
-                        <li><a href="">View review history</a></li>
                     </ul>
                 </li>
-                <li>
-                  <i className="fa fa-shopping-cart shopping-cart-icon" aria-hidden="true" />
-                  <span className="user-info item-badge" />
+                <li className="shopping-cart">
+                  <a href="#">
+                    <i className="fa fa-shopping-cart shopping-cart-icon" aria-hidden="true" />
+                    <span className="user-info item-badge">9+</span>
+                  </a>
                 </li>
             </ul>
           </section>
