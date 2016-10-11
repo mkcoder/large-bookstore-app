@@ -1,21 +1,46 @@
 .container {
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
 }
 
-.container .page-header .logo,  .container .page-header .search-bar, .container .page-header .search-bar{
-  display: flex;
+
+/*
+*    TOP NAV BAR STYLES
+*/
+
+nav#top-nav-bar {
+  background: #1C2833;
 }
 
-.container .page-header:after {
-  clear: both;
-  display: block;
+nav#top-nav-bar ul {
+  padding: 0;
 }
 
-.container .page-header .logo {
-  flex: 10;
+nav#top-nav-bar li {
+  list-style: none;
+  line-height: 1.5em;
+  padding: 20px 10px;
+  cursor: pointer;
 }
 
-.container .page-header .user-info {
-  flex: 5;
+nav#top-nav-bar li a {
+  text-decoration: none;
+  text-align: center;
+  color: #EBEDEF;
+  font-size: 18px;
+}
+
+nav#top-nav-bar li:hover {
+  background: #424949;
+}
+
+
+@media screen and (min-width: 960px) {
+  nav#top-nav-bar ul {
+    display: flex;
+  }
+  nav#top-nav-bar ul li {
+    flex: 1;
+    text-align: center;
+  }
 }

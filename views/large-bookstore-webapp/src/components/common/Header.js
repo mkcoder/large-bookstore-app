@@ -12,8 +12,8 @@ class Header extends React.Component {
           <h4 className="logo-tagline">Where books meet enterprise</h4>
         </section>
         <UserInfoBox />
-        <NavBar />
         <SearchBar />
+        <NavBar />
       </header>
     );
   }
