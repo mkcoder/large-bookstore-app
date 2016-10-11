@@ -1,5 +1,6 @@
 # Release Notes
 ### BUILD Status
+[![Build status](https://ci.appveyor.com/api/projects/status/4cw93nqs7ky27nle?svg=true)](https://ci.appveyor.com/project/mkcoder/large-bookstore-app)
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
 # Update 03-Oct-16
 > Been sick for the past couple of days, will update once i feel better. Been doing a lot of C programming, and Streams in java. Did start on a ruby script that i will use as a MAKEFILE.
