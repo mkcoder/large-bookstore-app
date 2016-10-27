@@ -1,5 +1,6 @@
 package com.mkcoder.mycodingblog.largebookstore.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mkcoder.mycodingblog.largebookstore.builder.BookBuilder;
 import com.mkcoder.mycodingblog.largebookstore.database.table.AbstractDatabaseTable;
 
@@ -127,6 +128,7 @@ public class Book extends AbstractDatabaseTable {
 
     @SuppressWarnings("JpaAttributeTypeInspection")
     @Override
+    @JsonIgnore
     public Field[] getFields() {
         return this.getClass().getDeclaredFields();
     }

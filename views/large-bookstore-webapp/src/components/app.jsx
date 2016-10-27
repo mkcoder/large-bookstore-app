@@ -10,8 +10,12 @@ class App extends React.Component {
                 <section className="body">
                     {this.props.children}
                 </section>
-                <footer className="page-footer" />
-            </div>
+                <footer className="page-footer">
+                  &copy; <a href="https://github.com/mkcoder" target="_blank">mkcoder</a> |
+                  <a href="https://mkscodingblog.wordpress.com/" target="_blank">mycodingblog</a> |
+                    <a href="https://github.com/mkcoder/large-bookstore-app" target="_blank">large-book-store app</a>
+                </footer>
+             </div>
         );
     }
 }

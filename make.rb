@@ -6,6 +6,11 @@ class Main
             puts 'mvn-latest-version'
         elsif command == 'mvn-next-version' then
             puts 'mvn-next-version'
+        elsif command == 'build-and-run' then
+          puts 'this build and runs java services only'
+          %x{mvn clean install jetty:run}
+        elsif command 'start-all' then
+          puts 'this runs and start all java services and front-end task'
         end
     end
 end

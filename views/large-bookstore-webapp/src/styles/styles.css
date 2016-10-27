@@ -259,6 +259,16 @@ section.homepage-banner {
   cursor: pointer;
 }
 
+.page-footer {
+  text-align: center;
+}
+
+.page-footer a {
+  color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 960px) {
   nav#top-nav-bar ul {
     display: flex;
