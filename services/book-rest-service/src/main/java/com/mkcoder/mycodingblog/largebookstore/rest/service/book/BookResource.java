@@ -2,12 +2,14 @@ package com.mkcoder.mycodingblog.largebookstore.rest.service.book;
 
 import com.mkcoder.mycodingblog.largebookstore.model.Book;
 import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,8 +28,14 @@ public class BookResource {
     @GET
     @Path("/all")
     @Produces("application/json")
-    public List<Book> getAllBooks() {
-        return bookRetrievalRepository.getAll();
+    @CrossOrigin(origins = "*")
+    public Response getAllBooks() {
+
+        return Response.ok()
+                .entity(bookRetrievalRepository.getAll())
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS").build();
     }
 
     @GET

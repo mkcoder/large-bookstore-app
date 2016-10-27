@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar.js';
-import UserInfoBox from '../UserInfo/UserInfoBox.js';
+import UserInfoBox from './UserInfoBox.js';
 import SearchBar from './SearchBar.js';
 
 class Header extends React.Component {
