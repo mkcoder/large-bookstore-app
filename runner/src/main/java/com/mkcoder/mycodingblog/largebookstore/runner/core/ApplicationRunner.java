@@ -22,7 +22,6 @@ public class ApplicationRunner {
         resourceConfig.getResources().forEach(r -> {
             System.out.println(r);
         });
-        GrizzlyHttpContainer container = new GrizzlyHttpContainer(resourceConfig);
 
         HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(FINAL_URL), resourceConfig);
         try {
