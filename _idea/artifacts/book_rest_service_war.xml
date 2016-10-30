@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="book-rest-service:war">
-    <output-path>$PROJECT_DIR$/services/book-rest-service/target</output-path>
-    <root id="archive" name="book-rest-service-0.1.1.war">
-      <element id="artifact" artifact-name="book-rest-service:war exploded" />
-    </root>
-  </artifact>
-</component>
