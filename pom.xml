@@ -6,11 +6,11 @@
 
     <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
     <artifactId>large-bookstore-app-parent</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
     <packaging>pom</packaging>
 
     <properties>
-        <parent-version>0.0.9</parent-version>
+        <parent-version>0.1.1</parent-version>
 
         <pattern-visitor-version>${parent-version}</pattern-visitor-version>
         <pattern-builder-version>${parent-version}</pattern-builder-version>
@@ -29,8 +29,18 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <version>4.0.0-b01</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.3.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -70,7 +80,9 @@
         <module>repository/book-repository</module>
 
         <!-- services -->
+        <module>services</module>
         <module>services/book-rest-service</module>
+        <module>services/restful-jwt-authentication-service</module>
     </modules>
 
     <build>
@@ -124,7 +136,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.4.RC1</version>
+                <version>9.3.13.v20161014</version>
                 <configuration>
                     <skip>true</skip>
                     <webApp>
@@ -165,7 +177,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
+                <version>3.0.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>

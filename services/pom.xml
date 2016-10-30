@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>large-bookstore-app-parent</artifactId>
+        <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+        <version>0.2.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>large-bookstore-app-service</artifactId>
+    <version>0.2.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>restful-jwt-authentication-service</artifactId>
+            <version>0.2.0</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>book-rest-service</artifactId>
+            <version>0.2.0</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                    <daemon>true</daemon>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <contextHandlers>
+                        <contextHandler implementation="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
+                            <war>${project.basedir}\book-rest-service\target\book-rest-service-${parent.version}.war</war>
+                            <contextPath>/rest/book</contextPath>
+                        </contextHandler>
+                        <contextHandler implementation="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
+                            <war>${project.basedir}\restful-jwt-authentication-service\target\restful-jwt-authentication-service-${parent.version}.war</war>
+                            <contextPath>/rest/authenticate</contextPath>
+                        </contextHandler>
+                    </contextHandlers>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

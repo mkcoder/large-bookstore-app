@@ -5,13 +5,13 @@
     <parent>
         <artifactId>large-bookstore-app-parent</artifactId>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>0.1.1</version>
+        <version>0.2.0</version>
         <relativePath>../../../pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>book-model</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.openjpa/openjpa -->
@@ -24,23 +24,23 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.4</version>
+            <version>6.0.5</version>
         </dependency>
 
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>pattern-builder</artifactId>
-            <version>0.1.1</version>
+            <version>0.2.0</version>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>database-table-column</artifactId>
-            <version>0.1.1</version>
+            <version>0.2.0</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.5.4</version>
+            <version>2.5.5</version>
         </dependency>
     </dependencies>
 

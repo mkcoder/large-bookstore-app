@@ -7,12 +7,12 @@
     <parent>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
         <artifactId>large-bookstore-app-parent</artifactId>
-        <version>0.1.1</version>
+        <version>0.2.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>loader</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
 
 
     <dependencies>
@@ -50,17 +50,17 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.4</version>
+            <version>6.0.5</version>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>configurations</artifactId>
-            <version>0.1.1</version>
+            <version>0.2.0</version>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>configurations</artifactId>
-            <version>0.1.1</version>
+            <version>0.2.0</version>
         </dependency>
     </dependencies>
 

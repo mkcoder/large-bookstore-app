@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="restful-jwt-authentication-service:war">
+    <output-path>$PROJECT_DIR$/services/restful-jwt-authentication-service/target</output-path>
+    <root id="archive" name="restful-jwt-authentication-service-0.1.1.war">
+      <element id="artifact" artifact-name="restful-jwt-authentication-service:war exploded" />
+    </root>
+  </artifact>
+</component>

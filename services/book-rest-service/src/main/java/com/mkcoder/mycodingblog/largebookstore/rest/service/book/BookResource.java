@@ -30,7 +30,6 @@ public class BookResource {
     @Produces("application/json")
     @CrossOrigin(origins = "*")
     public Response getAllBooks() {
-
         return Response.ok()
                 .entity(bookRetrievalRepository.getAll())
                 .header("Access-Control-Allow-Origin", "*")

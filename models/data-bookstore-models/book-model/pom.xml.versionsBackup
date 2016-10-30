@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>large-bookstore-app-parent</artifactId>
+        <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+        <version>0.2.0</version>
+        <relativePath>../../../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>book-model</artifactId>
+    <version>0.2.0</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.openjpa/openjpa -->
+        <dependency>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>pattern-builder</artifactId>
+            <version>0.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
+            <artifactId>database-table-column</artifactId>
+            <version>0.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.openjpa</groupId>
+                <artifactId>openjpa-maven-plugin</artifactId>
+                <configuration>
+                    <persistenceXmlFile>E:\Sandbox\large-bookstore-app\repository\book-repository\src\main\resources\META-INF\persistence.xml</persistenceXmlFile>
+                    <skip>true</skip>
+                    <includes>
+                        **/*Book.class
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
