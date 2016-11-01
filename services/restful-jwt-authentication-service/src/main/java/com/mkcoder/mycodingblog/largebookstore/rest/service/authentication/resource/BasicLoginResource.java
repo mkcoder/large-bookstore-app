@@ -1,8 +1,15 @@
 package com.mkcoder.mycodingblog.largebookstore.rest.service.authentication.resource;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.impl.crypto.MacProvider;
+import org.jose4j.base64url.Base64Url;
+import org.jose4j.jwe.ContentEncryptionAlgorithmIdentifiers;
+import org.jose4j.jwe.JsonWebEncryption;
+import org.jose4j.jwe.KeyManagementAlgorithmIdentifiers;
+import org.jose4j.jwk.RsaJsonWebKey;
+import org.jose4j.jwk.RsaJwkGenerator;
+import org.jose4j.jwt.JwtClaims;
+import org.jose4j.keys.AesKey;
+import org.jose4j.lang.ByteUtil;
+import org.jose4j.lang.JoseException;
 
 import javax.inject.Named;
 import javax.validation.constraints.NotNull;
@@ -11,8 +18,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import java.security.Key;
-import java.sql.Date;
-import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,35 +46,47 @@ public class BasicLoginResource {
     @GET
     @Path("/login")
     @Produces("text/plain")
-    public String login(@QueryParam("username") @NotNull String username, @NotNull @QueryParam("password") String password) {
+    public String login(@QueryParam("username") @NotNull String username, @NotNull @QueryParam("password") String password) throws JoseException {
         System.out.println("username: " + username + " password: " + password);
         if ( fakeUserDb.containsKey(username) ) {
             if ( !fakeUserDb.get(username).equals(password) ) return "Either the username or password don't match";
             // if username and password are verified we can use the secret
             // begin authentication here
-            String issues = "http://large-bookstore-app.dev";
-            System.out.println("the secret is: " + secret);
-            long iat = System.currentTimeMillis() / 1000L;
-            long exp = iat + 60L;
+            RsaJsonWebKey rsaJsonKey = RsaJwkGenerator.generateJwk(2048);
+            rsaJsonKey.setKeyId( secret ); // this will be retrieved from the configuration panel
 
-            Map<String, Object> claims = new HashMap<>();
-            claims.put("usr", username);
-            claims.put("email", "fake@example.org");
-            claims.put("clm", "basic");
-            Key key = MacProvider.generateKey();
+            JwtClaims claims = new JwtClaims();
+            claims.setAudience("private");
+            claims.setIssuer("http://large-bookstore-app.dev");
+            claims.setExpirationTimeMinutesInTheFuture(1000);
+            claims.setGeneratedJwtId();
+            claims.setIssuedAtToNow();
+            claims.setSubject(username);
+            claims.setClaim("autz", "basic");
+            claims.setClaim("pwd", Base64Url.encode(password.getBytes()));
+            /*
+                we will store a user password hashed in there
+            * */
 
-            System.out.println("Key: " + key);
+            Key key = new AesKey(ByteUtil.randomBytes(16));
+            System.out.println("Key: " + key.getEncoded());
+            System.out.println("Key: " + key.getAlgorithm());
+            JsonWebEncryption jwe = new JsonWebEncryption();
+            jwe.setPayload(claims.toJson());
+            jwe.setAlgorithmHeaderValue(KeyManagementAlgorithmIdentifiers.A128KW);
+            jwe.setEncryptionMethodHeaderParameter(ContentEncryptionAlgorithmIdentifiers.AES_128_CBC_HMAC_SHA_256);
+            jwe.setKey(key);
+            String jweSerialized = jwe.getCompactSerialization();
+            claims.setClaim("pwd", jwe);
 
 
-            String compactJWS = Jwts.builder()
-                    .setAudience("private")
-                    .setIssuedAt(Date.from(Instant.EPOCH))
-                    .setExpiration(Date.from(Instant.EPOCH.plusSeconds(1000)))
-                    .setClaims(claims)
-                    .signWith(SignatureAlgorithm.RS512, key)
-                    .compact();
+            System.out.println("Serialzed password: " + jweSerialized);
+            jwe = new JsonWebEncryption();
+            jwe.setKey(key);
+            jwe.setCompactSerialization(jweSerialized);
+            System.out.println("Unserialized password: " + jwe.getPayload());
 
-            return "Username found your SWT is: "+compactJWS;
+            return "Username found your SWT is: " + jweSerialized;
         } else {
             return "Username not found";
         }
