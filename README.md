@@ -1,4 +1,4 @@
 # v1.0.0-beta release notes
 these are the release notes for 1.0.0-beta RC, in this section i want to quickly run through the current app structure and won't discuss the future growth and other stuff.
 
-To run the project open the 
+To run the project open the [persistence.xml](https://github.com/mkcoder/large-bookstore-app/blob/1.0.0-beta/repository/book-repository/src/main/resources/META-INF/persistence.xml) which is set to use the MYSQL driver. Update the setting accordingly, we don't have a flyway set up yet will do so in the future, in the mean time you could execute the .sql located in the flyway folder located in the root directory it should set your database with a good schema and data to run this project. The front-end is built independently of the backend services and you could run that using ```npm start```. Enjoy!
