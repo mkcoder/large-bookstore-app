@@ -1,14 +1,35 @@
 import React from 'react';
-import {Link} from 'react-router';
+import BookList from './BookList';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as bookActions from '../../actions/BookAction';
 
-export default class ViewAllBooks extends React.Component {
+class ViewAllBooks extends React.Component {
     constructor() {
         super();
-        fetch('http://large-bookstore-app.dev/rest/book/all').then(function(response) { return response.text() }).then((text) => JSON.parse(text)).then((json) => console.log(json));                
-    }
+        
+    };
+
     render () {        
         return (
-            <h1> I will show all the books </h1>
+            <section>
+                {this.props.books.map(BookList)}
+            </section>
         );
-    }
+    };
 }
+
+
+function mapStateToProps(state) {
+  return {    
+    books: state.BookReducers.books
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(bookActions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ViewAllBooks);

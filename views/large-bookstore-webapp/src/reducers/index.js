@@ -1,3 +1,9 @@
 // Set up your root reducer here...
  import { combineReducers } from 'redux';
- export default combineReducers;
+ import BookReducers from './BookReducer.js';
+ 
+const rootReducers = combineReducers({
+     BookReducers
+ });
+
+ export default rootReducers;

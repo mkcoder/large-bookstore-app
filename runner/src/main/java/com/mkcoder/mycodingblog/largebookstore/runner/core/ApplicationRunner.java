@@ -1,7 +1,6 @@
 package com.mkcoder.mycodingblog.largebookstore.runner.core;
 
 import org.glassfish.grizzly.http.server.HttpServer;
-import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -9,7 +8,7 @@ import java.io.IOException;
 import java.net.URI;
 
 public class ApplicationRunner {
-    private static final String FINAL_URL = "http://localhost:5678/";
+    private static final String FINAL_URL = "http://localhost:5678/rest";
 
     public static void main(String[] args) {
         ConfigureGrizzlySeverAndServe();
@@ -17,7 +16,7 @@ public class ApplicationRunner {
 
     private static void ConfigureGrizzlySeverAndServe() {
         ResourceConfig resourceConfig = new ResourceConfig();
-        resourceConfig.packages("com.mkcoder.mycodingblog.largebookstore.rest.service.book");
+        resourceConfig.packages("com.mkcoder.mycodingblog.largebookstore");
         System.out.println("registered resources: ");
         resourceConfig.getResources().forEach(r -> {
             System.out.println(r);

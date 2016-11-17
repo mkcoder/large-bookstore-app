@@ -5,13 +5,13 @@
     <parent>
         <artifactId>large-bookstore-app-parent</artifactId>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>0.2.0</version>
+        <version>0.3.0</version>
         <relativePath>../../../pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>book-model</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.openjpa/openjpa -->

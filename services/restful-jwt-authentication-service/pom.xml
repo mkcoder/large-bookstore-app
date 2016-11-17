@@ -6,12 +6,12 @@
     <parent>
         <artifactId>large-bookstore-app-parent</artifactId>
         <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
-        <version>0.2.0</version>
+        <version>0.3.0</version>
         <relativePath>../../../large-bookstore-app/pom.xml</relativePath>
     </parent>
 
     <artifactId>restful-jwt-authentication-service</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <packaging>war</packaging>
 
     <dependencies>

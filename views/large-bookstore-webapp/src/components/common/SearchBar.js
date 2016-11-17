@@ -1,7 +1,22 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as bookActions from '../../actions/BookAction';
 
-export default class SearchBar extends React.Component {
-  render( ) {
+export class SearchBar extends React.Component {
+  constructor () {
+    super();
+    this.state = {search: ""};
+    this.findByTitle = this.findByTitle.bind(this);
+  }  
+  findByTitle (evt) {    
+    console.log(this.state);
+    console.log(this.state.serach);
+    this.props.actions.bookSearch(this.state.search);
+    alert(this.state.search);
+    evt.preventDefault();
+  }
+  render ( ) {
     return (
         <div className="search-bar">
           <form action="">
@@ -13,8 +28,8 @@ export default class SearchBar extends React.Component {
                 <option value="self-help">Self help</option>
               </select>
             </div>
-            <input type="search" className="form input-text"/>
-            <button type="submit" className="search-bar search-button">
+            <input type="search" className="form input-text" value={this.state.search} onChange={evt => this.setState({ search: evt.target.value })}/>
+            <button type="submit" className="search-bar search-button" onClick={this.findByTitle}>
               <i className="fa fa-search" aria-hidden="true" />
             </button>
           </form>
@@ -22,3 +37,17 @@ export default class SearchBar extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    bookSearch: state.BookReducers.search
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(bookActions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

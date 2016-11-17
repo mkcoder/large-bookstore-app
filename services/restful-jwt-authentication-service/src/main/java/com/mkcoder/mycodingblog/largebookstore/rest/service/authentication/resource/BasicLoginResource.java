@@ -77,8 +77,6 @@ public class BasicLoginResource {
             jwe.setEncryptionMethodHeaderParameter(ContentEncryptionAlgorithmIdentifiers.AES_128_CBC_HMAC_SHA_256);
             jwe.setKey(key);
             String jweSerialized = jwe.getCompactSerialization();
-            claims.setClaim("pwd", jwe);
-
 
             System.out.println("Serialzed password: " + jweSerialized);
             jwe = new JsonWebEncryption();

@@ -1,6 +1,8 @@
 class Main
     def initialize(command, options)
-        if command == 'mvn-update-version' then
+        if command == 'help' then
+          puts 'helpful commands'
+        elsif command == 'mvn-update-version' then
             puts 'mvn-update-version'
             version = options[/version=([0-9].+)/, 1]
             puts "updating maven version to #{version}"

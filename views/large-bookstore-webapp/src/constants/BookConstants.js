@@ -1,0 +1,2 @@
+export const BOOK_SEARCH = 'BOOK_SEARCH';
+export const ALL_BOOKS_LOADED = 'ALL_BOOKS_LOADED';
