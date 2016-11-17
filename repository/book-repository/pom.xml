@@ -29,34 +29,34 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.3.3.RELEASE</version>
+            <version>4.3.4.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.3.RELEASE</version>
+            <version>4.3.4.RELEASE</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.3.3.RELEASE</version>
+            <version>4.3.4.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.3.RELEASE</version>
+            <version>4.3.4.RELEASE</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>loader</artifactId>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </dependency>
         <dependency>
             <groupId>com.mkcoder.mycodingblog.largebookstore</groupId>
             <artifactId>book-model</artifactId>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </dependency>
     </dependencies>
 </project>
