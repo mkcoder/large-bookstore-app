@@ -1,27 +1,27 @@
 package com.mkcoder.mycodingblog.largebookstore.repository.book.internal.retrieval;
 
+import com.mkcoder.mycodingblog.largebookstore.configurations.DatabaseConfigurePropertyLoader;
 import com.mkcoder.mycodingblog.largebookstore.model.Book;
 import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalRepository;
 
-import javax.inject.Named;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
+import java.util.Objects;
 
-@Named
 public class BasicBookRetrievalRepositoryImpl implements BasicBookRetrievalRepository {
 
-    private EntityManagerFactory emFactory;
+    @PersistenceContext
     private EntityManager manager;
     private CriteriaBuilder cb;
+    private DatabaseConfigurePropertyLoader databaseConfigurePropertyLoader;
 
-    public BasicBookRetrievalRepositoryImpl() {
-        emFactory = Persistence.createEntityManagerFactory("LargeBookStoreBookJPA");
-        manager = emFactory.createEntityManager();
-        cb = manager.getCriteriaBuilder();
+    @Inject
+    public BasicBookRetrievalRepositoryImpl(DatabaseConfigurePropertyLoader databaseConfigurePropertyLoader) {
+        this.databaseConfigurePropertyLoader = Objects.requireNonNull(databaseConfigurePropertyLoader);
     }
 
     @Override
