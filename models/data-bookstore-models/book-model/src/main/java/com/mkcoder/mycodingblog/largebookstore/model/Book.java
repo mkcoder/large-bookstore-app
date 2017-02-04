@@ -16,7 +16,6 @@ import java.math.BigDecimal;
  */
 @Entity
 @Table(name = "book")
-@IdClass(BookEntityPK.class)
 public class Book {
     private int id;
     private int isbn;
@@ -35,7 +34,6 @@ public class Book {
         this.id = id;
     }
 
-    @Id
     @Column(name = "isbn")
     public int getIsbn() {
         return isbn;

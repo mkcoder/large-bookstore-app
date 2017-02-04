@@ -3,6 +3,8 @@
 
     <persistence-unit name="LargeBookStoreBookJPA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.mkcoder.mycodingblog.largebookstore.model.Book</class>
+        <class>com.mkcoder.mycodingblog.largebookstore.model.BookEntityPK</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
             <property name="hibernate.archive.autodetection" value="class"/>

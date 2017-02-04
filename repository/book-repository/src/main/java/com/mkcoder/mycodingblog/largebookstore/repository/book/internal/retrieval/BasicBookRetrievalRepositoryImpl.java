@@ -5,39 +5,45 @@ import com.mkcoder.mycodingblog.largebookstore.model.Book;
 import com.mkcoder.mycodingblog.largebookstore.repository.book.BasicBookRetrievalRepository;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 import java.util.Objects;
 
+@Named
 public class BasicBookRetrievalRepositoryImpl implements BasicBookRetrievalRepository {
 
-    @PersistenceContext
-    private EntityManager manager;
+
+    private EntityManager entityManager;
+    private EntityManagerFactory entityManagerFactory;
     private CriteriaBuilder cb;
     private DatabaseConfigurePropertyLoader databaseConfigurePropertyLoader;
 
     @Inject
-    public BasicBookRetrievalRepositoryImpl(DatabaseConfigurePropertyLoader databaseConfigurePropertyLoader) {
+    public BasicBookRetrievalRepositoryImpl(DatabaseConfigurePropertyLoader databaseConfigurePropertyLoader, EntityManagerFactory entityManagerFactory) {
         this.databaseConfigurePropertyLoader = Objects.requireNonNull(databaseConfigurePropertyLoader);
+        this.entityManagerFactory = entityManagerFactory;
+        this.entityManager = entityManagerFactory.createEntityManager();
+        cb = entityManager.getCriteriaBuilder();
     }
 
     @Override
     public List<Book> getAll() {
         CriteriaQuery<Book> query = cb.createQuery(Book.class);
         CriteriaQuery<Book> bookQuery = query.select(query.from(Book.class));
-        return manager.createQuery(bookQuery).getResultList();
+        return entityManager.createQuery(bookQuery).getResultList();
     }
 
     @Override
     public Book find(int id) {
-        return manager.find(Book.class, id);
+        return entityManager.find(Book.class, id);
     }
 
     @Override
     public List<Book> find(CriteriaQuery criteria) {
-        return manager.createQuery(criteria).getResultList();
+        return entityManager.createQuery(criteria).getResultList();
     }
 }
