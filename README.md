@@ -2,6 +2,21 @@
 ### BUILD Status
 [![Build status](https://ci.appveyor.com/api/projects/status/4cw93nqs7ky27nle?svg=true)](https://ci.appveyor.com/project/mkcoder/large-bookstore-app)
 [![Build Status](https://travis-ci.org/mkcoder/large-bookstore-app.svg?branch=master)](https://travis-ci.org/mkcoder/large-bookstore-app) [![Coverage Status](https://coveralls.io/repos/github/mkcoder/large-bookstore-app/badge.svg?branch=master)](https://coveralls.io/github/mkcoder/large-bookstore-app?branch=master)
+# Update 19-Dec-16
+> Been busy with another project right now, so that has taken a lot of my time both on the weekdays + weekends. But i do an idea of 
+> where i want to take this project, next goal is to complete the user signup form and start focus on user autherntication. I still have 
+> a lot of react code i need to finish :/. Still going to be pushing my own term 'tier-based microservices', basically instead of 
+> having multiple services that aren't logically oriented and everywhere. We first start of by creating a tier for each phase our 
+> service might touch, and other services might touch the same we start to create coherent architecture that follows a flow of an 
+> application. A small foreshadow: event based system, might try it out. 
+
+## Goal 2017 Q1 (APR)
+
+>- [ ] user authentication
+>- [ ] ability to search for a book
+>- [ ] recreate the database scehma
+>- [ ] ability to create a user
+
 # Version 0.2.0
 > - The ruby make file is complete will update from now to make it easy to create a streamline process. 
 > - i had an idea to create a restful authentication service for our large bookstore application
